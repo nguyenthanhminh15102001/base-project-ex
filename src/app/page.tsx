@@ -1,3 +1,4 @@
-export default function HomePage() {
-  return <div>Home</div>;
+"use client";
+export default function Page() {
+  return <div>Home Page</div>;
 }

@@ -19,6 +19,7 @@ import {
   Modal,
   Select,
 } from "@/components/ui";
+import { ThemeDemo } from "./ThemeDemo";
 
 const selectOptions = [
   { label: "Default", value: "default" },
@@ -85,10 +86,12 @@ export function DesignSystemShowcase() {
       component="main"
       sx={{
         minHeight: "100vh",
-        bgcolor: "#f6f8fb",
+        bgcolor: "background.default",
         color: "text.primary",
         px: { xs: 2, md: 4 },
         py: { xs: 3, md: 5 },
+        transition: (theme) =>
+          theme.transitions.create(["background-color", "color"]),
       }}
     >
       <Box sx={{ maxWidth: 1180, mx: "auto" }}>
@@ -145,6 +148,13 @@ export function DesignSystemShowcase() {
               </Typography>
             </Paper>
           </Box>
+
+          <Section
+            title="Theme Demo"
+            description="Kiểm tra MUI theme tokens áp dụng vào base components."
+          >
+            <ThemeDemo />
+          </Section>
 
           <Section
             title="Color Tokens"

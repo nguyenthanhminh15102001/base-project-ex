@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { MuiProvider } from "@/providers/MuiProvider";
+import { AppProvider } from "@/providers/AppProvider";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next App",
-  description: "Next.js App Router base",
+  title: "Base Project",
+  description: "Next.js App Router base project",
 };
 
 type RootLayoutProps = {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <MuiProvider>{children}</MuiProvider>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

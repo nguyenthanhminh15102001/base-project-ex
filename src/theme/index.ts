@@ -1,13 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 
-import { palette } from "./palette";
+import { components } from "./components";
 
-export const theme = createTheme({
-  palette,
-  typography: {
-    fontFamily: "Arial, sans-serif",
-  },
-  shape: {
-    borderRadius: 8,
-  },
-});
+import { shape } from "./shape";
+import { typography } from "./typography";
+import { palettes, ThemeName } from "./palette";
+
+export function createAppTheme(themeName: ThemeName) {
+  return createTheme({
+    palette: palettes[themeName],
+    typography,
+    shape,
+    components,
+  });
+}
