@@ -18,7 +18,7 @@ import {
   Loading,
   Modal,
   Select,
-} from "@/components/base";
+} from "@/components/ui";
 
 const selectOptions = [
   { label: "Default", value: "default" },

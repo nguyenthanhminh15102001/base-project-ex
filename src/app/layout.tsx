@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import { MuiProvider } from "@/providers/MuiProvider";
 
-import "./globals.css";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Next App",
